@@ -8,6 +8,13 @@ Files and directories are symlinked to their appropriate locations on the
 local machine. Use the `install.sh` script to create the symlinks. Details
 in the [Installation](#installation) section.
 
+## Contents
+
+- ```nvim/```: Neovim configuration files. Modified kickstart.nvim configuration. See [Acknowledgements](#acknowledgements) for more information.  
+- ```.tmux.conf```: Tmux configuration file.  
+- ```.bash_aliases```: Bash aliases.  
+- ```install.sh```: Script to create symlinks to the config/dotfiles.  
+
 ## Installation
 
 To install the dotfiles, clone this repository to your local machine and run
