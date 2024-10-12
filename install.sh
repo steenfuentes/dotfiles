@@ -31,7 +31,6 @@ else
     echo "" >> "$HOME/.bashrc"
     echo "# Bash Aliases" >> "$HOME/.bashrc"
     echo "if [ -f ~/.bash_aliases ]; then" >> "$HOME/.bashrc"
-    echo "    echo \"Loading ~/.bash_aliases\"" >> "$HOME/.bashrc"
     echo "    . ~/.bash_aliases" >> "$HOME/.bashrc"
     echo "fi" >> "$HOME/.bashrc"
     echo -e "${GREEN}Added Bash Aliases section to .bashrc${NC}"
