@@ -47,6 +47,7 @@ source ~/.bashrc
 ## Acknowledgements
 
 ```nvim``` configuration is a personalize version of the ```kickstart.nvim``` found on github: [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
+
 ```tmux``` configuration inspired by [typecraft-dev](https://github.com/typecraft-dev)
 
 
