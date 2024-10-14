@@ -14,7 +14,7 @@ in the [Installation](#installation) section.
 - ```.tmux.conf```: Tmux configuration file.
 - ```.bash_aliases```: Bash aliases.
 - ```install.sh```: Script to create symlinks to the config/dotfiles.
-- ```cursor```: Prompts for the AI assisted development tool, [Cursor](https://cursor.com/).
+- ```cursor/```: Prompts for the AI assisted development tool, [Cursor](https://cursor.com/).
 
 ## Installation
 
