@@ -17,6 +17,10 @@ in the [Installation](#installation) section.
 
 ## Installation
 
+### Prerequisites
+
+- [tmux](https://github.com/tmux/tmux)
+
 To install the dotfiles, clone this repository to your local machine and run
 the `install.sh` script. The script will create symlinks to the dotfiles in
 the appropriate locations.
