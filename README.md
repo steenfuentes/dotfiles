@@ -4,16 +4,17 @@ This repository contains my personal dotfiles for various tools and applications
 including Neovim, tmux, and others. These configurations help me maintain a
 consistent development environment across different machines.
 
-Files and directories are symlinked to their appropriate locations on the 
+Files and directories are symlinked to their appropriate locations on the
 local machine. Use the `install.sh` script to create the symlinks. Details
 in the [Installation](#installation) section.
 
 ## Contents
 
-- ```nvim/```: Neovim configuration files. Modified kickstart.nvim configuration. See [Acknowledgements](#acknowledgements) for more information.  
-- ```.tmux.conf```: Tmux configuration file.  
-- ```.bash_aliases```: Bash aliases.  
-- ```install.sh```: Script to create symlinks to the config/dotfiles.  
+- ```nvim/```: Neovim configuration files. Modified kickstart.nvim configuration. See [Acknowledgements](#acknowledgements) for more information.
+- ```.tmux.conf```: Tmux configuration file.
+- ```.bash_aliases```: Bash aliases.
+- ```install.sh```: Script to create symlinks to the config/dotfiles.
+- ```cursor```: Prompts for the AI assisted development tool, [Cursor](https://cursor.com/).
 
 ## Installation
 
