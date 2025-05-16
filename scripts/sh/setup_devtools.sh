@@ -1,8 +1,14 @@
 #! /bin/bash
 
-# Intended to setup a suite of preferred CLI tools
+# Intended to setup a suite of core dependencies to contribute within the 
+# AI and Advanced Analytics team at Avidity. This script installs system level
+# tools and dependencies and language-related tools. It is not intended to install
+# python packages or node packages. It is assumed that the user has already
+# installed the language runtimes (python, node, etc.). If not, see the README
+# for instructions on how to install the language runtimes.
 
-# Get the OS type from the input arguments (macos, linux)
+# Get the OS type from the input arguments (only macos currently supported. Any
+# other OS string will be returned as unsupported)
 OS_TYPE=$1
 
 # Install the tools
@@ -10,9 +16,6 @@ install_tools() {
     case $OS_TYPE in
         macos)
             install_macos_tools
-            ;;
-        linux)
-            install_linux_tools
             ;;
         *)
             echo "Unsupported OS type: $OS_TYPE"
@@ -47,6 +50,6 @@ install_macos_tools() {
 }
 
 # Install the tools for linux
-install_linux_tools() {
-    echo "Installing tools for Linux"
+install_ubuntu_tools() {
+    echo "Unfortunately, this script does not support 
 }

@@ -1,7 +1,7 @@
 return {
   'github/copilot.vim',
   config = function()
-    vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("")', {
+    vim.keymap.set('i', '<C-c><C-a>', 'copilot#Accept("")', {
       expr = true,
       replace_keycodes = false,
     })
