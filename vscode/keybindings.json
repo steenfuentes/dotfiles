@@ -1,4 +1,148 @@
-// Place your key bindings in this file to override the defaultsauto[]
+/// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "alt+m",
+    "command": "workbench.action.toggleMultiCursorModifier"
+  },
+  {
+    "key": "ctrl+i k",
+    "command": "editor.action.showDefinitionPreviewHover"
+  },
+  {
+    "key": "alt+shift+i",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": "\t"
+    }
+  },
+  {
+    "key": "alt+g alt+w",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "-editor.action.inlineSuggest.acceptNextWord",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+  {
+    "key": "alt+shift+right",
+    "command": "workbench.action.nextEditor",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+shift+left",
+    "command": "workbench.action.previousEditor",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+g alt+l",
+    "command": "editor.action.inlineSuggest.acceptNextLine"
+  },
+  {
+    "key": "alt+g alt+i",
+    "command": "editor.action.inlineSuggest.commit",
+    "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+  },
+  {
+    "key": "tab",
+    "command": "-editor.action.inlineSuggest.commit",
+    "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+  },
+  {
+    "key": "alt+shift+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "cmd+r cmd+p",
+    "command": "workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorLeft"
+  },
+  {
+    "key": "cmd+r cmd+]",
+    "command": "workbench.action.splitEditorUp"
+  },
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorUp"
+  },
+  {
+    "key": "ctrl+s shift+5",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "cmd+r cmd+\\",
+    "command": "-workbench.action.splitEditorRight"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "ctrl+c ctrl+a",
+    "command": "editor.action.acceptCursorTabSuggestion",
+    "when": "cpp.shouldAcceptTab"
+  },
+  {
+    "key": "tab",
+    "command": "-editor.action.acceptCursorTabSuggestion",
+    "when": "cpp.shouldAcceptTab"
+  },
+  {
+    "key": "cmd+l",
+    "command": "composerMode.chat"
+  },
+  {
+    "key": "ctrl+s h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "cmd+r cmd+left",
+    "command": "-workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+s l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+r cmd+right",
+    "command": "-workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+h a",
+    "command": "vscode-harpoon.addEditor"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "-workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "-workbench.view.backgroundAgent",
+    "when": "viewContainer.workbench.view.backgroundAgent.enabled"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+},
+{
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+        "text": "\\\r\n"
+    }
+    "when": "terminalFocus"
+}
+]
+/ Place your key bindings in this file to override the defaultsauto[]
 [
   {
     "key": "alt+m",
