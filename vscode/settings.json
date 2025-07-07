@@ -1,122 +1,173 @@
 {
-    "remote.SSH.showLoginTerminal": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.wordWrap": "on",
-    "editor.wordWrapColumn": 88,
-    "vim.textwidth": 88,
-    "liveServer.settings.donotVerifyTags": true,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "autoDocstring.docstringFormat": "numpy",
-    "editor.rulers": [
-        88
-    ],
-    "files.trimTrailingWhitespace": true,
-    "editor.inlineSuggest.enabled": true,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.wordWrapColumn": 88,
-    },
-    "[javascript]": {
-            "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-            "editor.formatOnType": false, // required
-            "editor.formatOnPaste": true, // optional
-            "editor.formatOnSave": true, // optional
-            "editor.formatOnSaveMode": "file", // required to format on save
-            "files.autoSave": "onFocusChange", // optional but recommended
-        },
-
-    "[typescript]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-        "editor.formatOnType": false, // required
-        "editor.formatOnPaste": true, // optional
-        "editor.formatOnSave": true, // optional
-        "editor.formatOnSaveMode": "file", // required to format on save
-        "files.autoSave": "onFocusChange", // optional but recommended
-        "vs-code-prettier-eslint.prettierLast": false // set as "true" to run 'prettier' last not first
-
-    },
-    "black-formatter.args": [
-        "--line-length",
-        "88"
-    ],
-    "vim.cursorStylePerMode.insert": "block",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.cursorStylePerMode.replace": "block",
-    "vim.cursorStylePerMode.visual": "block",
-    "vim.cursorStylePerMode.visualline": "block",
-    "vim.cursorStylePerMode.visualblock": "block",
-    "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                "<Esc>"
-            ],
-            "after": [
-                "<C-c>"
-            ]
+  "remote.SSH.showLoginTerminal": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 88,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "entity.name.function",
+          "entity.name.method",
+          "entity.name.class",
+          "entity.name.type.class",
+          "entity.name.type.method",
+          "entity.name.type.function"
+        ],
+        "settings": {
+          "fontStyle": "bold"
         }
-    ],
-    "pythonIndent.keepHangingBracketOnLine": true,
-    "pythonIndent.trimLinesWithOnlyWhitespace": true,
-    "pythonIndent.useTabOnHangingIndent": true,
-    "python.terminal.focusAfterLaunch": true,
-    "autoDocstring.includeName": true,
-    "hediet.vscode-drawio.resizeImages": null,
-    "editor.lineNumbers": "relative",
-    "editor.accessibilitySupport": "off",
-    "editor.unicodeHighlight.nonBasicASCII": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "git.ignoreRebaseWarning": true,
-    "git.confirmSync": false,
-    "remote.autoForwardPortsSource": "hybrid",
-    "workbench.colorTheme": "Gruvbox Dark Medium",
-    "accessibility.signals.lineHasError": {
-        "sound": "off"
+      }
+    ]
+  },
+  "vim.textwidth": 88,
+  "vim.leader": " ",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["vscode-harpoon.addEditor"]
     },
-    "accessibility.signals.lineHasBreakpoint": {
-        "sound": "off"
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["vscode-harpoon.editEditors"]
     },
-    "accessibility.signals.onDebugBreak": {
-        "sound": "off"
+    {
+      "before": ["<leader>", "p", "e"],
+      "commands": ["vscode-harpoon.editorQuickPick"]
     },
-    "accessibility.signals.taskFailed": {
-        "sound": "off"
-    },
-    "accessibility.signals.diffLineInserted": {
-        "sound": "off"
-    },
-    "accessibility.signals.diffLineDeleted": {
-        "sound": "off"
-    },
-    "accessibility.signals.diffLineModified": {
-        "sound": "off"
-    },
+    {
+      "before": ["<leader>", "1"],
+      "commands": ["vscode-harpoon.gotoEditor1"]
+    }
+  ],
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "autoDocstring.docstringFormat": "numpy",
+  "editor.rulers": [88],
+  "files.trimTrailingWhitespace": true,
+  "editor.inlineSuggest.enabled": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
-    "files.exclude": {
-        "**/.git": false
-    },
-    "cursor.cpp.disabledLanguages": [
-        "scminput"
-    ],
-    "svelte.enable-ts-plugin": true,
-    "mssql.enableRichExperiences": true,
-    "sqlDatabaseProjects.dotnetSDK Location": "/Users/sethsteen-fuentes/.dotnet",
-    "mssql.connections": [
-        {
-            "server": "localhost",
-            "database": "",
-            "authenticationType": "SqlLogin",
-            "user": "sa",
-            "password": "",
-            "emptyPasswordInput": false,
-            "savePassword": true,
-            "encrypt": "Mandatory",
-            "trustServerCertificate": true,
-            "connectTimeout": 15,
-            "commandTimeout": 30,
-            "applicationName": "vscode-mssql"
-        }
-    ],
-    "git.openRepositoryInParentFolders": "never"
+    "editor.wordWrapColumn": 88,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "python.locator": "js",
+  "[javascript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnType": false, // required
+    "editor.formatOnPaste": true, // optional
+    "editor.formatOnSave": true, // optional
+    "editor.formatOnSaveMode": "file", // required to format on save
+    "files.autoSave": "onFocusChange" // optional but recommended
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnType": false, // required
+    "editor.formatOnPaste": true, // optional
+    "editor.formatOnSave": true, // optional
+    "editor.formatOnSaveMode": "file", // required to format on save
+    "files.autoSave": "onFocusChange", // optional but recommended
+    "vs-code-prettier-eslint.prettierLast": false // set as "true" to run 'prettier' last not first
+  },
+  "black-formatter.args": ["--line-length", "88"],
+
+  "vim.cursorStylePerMode.insert": "block",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.replace": "block",
+  "vim.cursorStylePerMode.visual": "block",
+  "vim.cursorStylePerMode.visualline": "block",
+  "vim.cursorStylePerMode.visualblock": "block",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["<Esc>"],
+      "after": ["<C-c>"]
+    }
+  ],
+  "pythonIndent.keepHangingBracketOnLine": true,
+  "pythonIndent.trimLinesWithOnlyWhitespace": true,
+  "pythonIndent.useTabOnHangingIndent": true,
+  "python.terminal.focusAfterLaunch": true,
+  "autoDocstring.includeName": true,
+  "hediet.vscode-drawio.resizeImages": null,
+  "editor.lineNumbers": "relative",
+  "editor.accessibilitySupport": "off",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "git.ignoreRebaseWarning": true,
+  "git.confirmSync": false,
+  "remote.autoForwardPortsSource": "hybrid",
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "accessibility.signals.lineHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasBreakpoint": {
+    "sound": "off"
+  },
+  "accessibility.signals.onDebugBreak": {
+    "sound": "off"
+  },
+  "accessibility.signals.taskFailed": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineInserted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineDeleted": {
+    "sound": "off"
+  },
+  "accessibility.signals.diffLineModified": {
+    "sound": "off"
+  },
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/.git": false
+  },
+  "cursor.cpp.disabledLanguages": ["scminput"],
+  "svelte.enable-ts-plugin": true,
+  "mssql.enableRichExperiences": true,
+  "sqlDatabaseProjects.dotnetSDK Location": "/Users/sethsteen-fuentes/.dotnet",
+  "mssql.connections": [
+    {
+      "server": "localhost",
+      "database": "",
+      "authenticationType": "SqlLogin",
+      "user": "sa",
+      "password": "",
+      "emptyPasswordInput": false,
+      "savePassword": true,
+      "encrypt": "Mandatory",
+      "trustServerCertificate": true,
+      "connectTimeout": 15,
+      "commandTimeout": 30,
+      "applicationName": "vscode-mssql"
+    }
+  ],
+  "git.openRepositoryInParentFolders": "never",
+  "snowflake.connectionsConfigFile": "/Users/sethsteen-fuentes/.snowflake/connections.toml",
+  "workbench.iconTheme": "catppuccin-frappe",
+  "zenMode.hideLineNumbers": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions.ignoreRecommendations": true,
+  "markdown-preview-enhanced.previewTheme": "gothic.css",
+  "markdown-preview-enhanced.revealjsTheme": "beige.css",
+  "markdown-preview-enhanced.codeBlockTheme": "xonokai.css",
+  "cursor.cpp.enablePartialAccepts": true,
+  "cursor.composer.shouldAllowCustomModes": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "VSCodeCounter.exclude": [
+    "**/.gitignore",
+    "**/.vscode/**",
+    "**/node_modules/**",
+    "**/venv/**"
+  ]
 }

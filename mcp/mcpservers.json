@@ -1,0 +1,56 @@
+{
+    "mcpServers": {
+        "mcp-obsidian": {
+          "command": "uvx",
+          "args": [
+            "mcp-obsidian"
+          ],
+          "env": {
+            "OBSIDIAN_API_KEY": "<API_KEY>"
+          }
+        },
+        "linear": {
+          "command": "/opt/homebrew/opt/node@20/bin/node",
+          "args": ["/Users/sethsteen-fuentes/dev/tools/linear-mcp/build/index.js"],
+          "env": {
+            "LINEAR_API_KEY": "<API_KEY>"
+          },
+          "disabled": false,
+          "autoApprove": []
+        },
+  "github": {
+        "command": "docker",
+        "args": [
+          "run",
+          "-i",
+          "--rm",
+          "-e",
+          "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "ghcr.io/github/github-mcp-server"
+        ],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "<ACCESS_TOKEN>"
+        }
+      },
+            "notionApi": {
+          "command": "npx",
+          "args": ["-y", "@notionhq/notion-mcp-server"],
+          "env": {
+            "OPENAPI_MCP_HEADERS": "{\"Authorization\": \"Bearer <API_KEY>\", \"Notion-Version\": \"2022-06-28\" }"
+          }
+        }
+    },
+        "filesystem": {
+          "command": "docker",
+          "args": [
+            "run",
+            "-i",
+            "--rm",
+            "--mount", "type=bind,src=/Users/<USER>/git,dst=/projects/git",
+            "--mount", "type=bind,src=/Users/<USER>/loc,dst=/projects/loc",
+            "--mount", "type=bind,src=/Users/<USER>/tmp,dst=/projects/tmp",
+            "mcp/filesystem",
+            "/projects"
+          ]
+        }
+  }
