@@ -1,4 +1,5 @@
 {
+  "window.zoomLevel": 1,
   "remote.SSH.showLoginTerminal": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.multiCursorModifier": "ctrlCmd",
@@ -169,5 +170,7 @@
     "**/.vscode/**",
     "**/node_modules/**",
     "**/venv/**"
-  ]
+  ],
+    "github.copilot.nextEditSuggestions.enabled": true
 }
+
