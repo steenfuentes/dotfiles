@@ -49,7 +49,7 @@ Array of task objects with structure:
 ```json
 {
   "id": "string",
-  "description": "string", 
+  "description": "string",
   "type": "feature|test|refactor|docs",
   "status": "pending|in-progress|completed",
   "dependencies": ["task_id_1", "task_id_2"]
@@ -67,39 +67,6 @@ Array of questions for requirement ambiguities:
 - Unclear functional requirements
 - Missing technical specifications
 - Integration and compatibility concerns
-
-### 中文报告
-
-> 以下为中文版本，内容与英文部分对应。AGI可跳过此部分。
-
-#### `overview` - 总体策略
-- 高层实现策略和架构方法
-- 测试方法论和覆盖目标
-- 关键技术决策和假设
-
-#### `tasks` - 任务清单
-任务对象数组结构：
-```json
-{
-  "id": "字符串",
-  "description": "任务描述", 
-  "type": "功能|测试|重构|文档",
-  "status": "待开始|进行中|已完成",
-  "dependencies": ["依赖任务ID1", "依赖任务ID2"]
-}
-```
-
-#### `diagram` - 依赖图表
-Mermaid图表代码展示：
-- 任务依赖和流程
-- 关键路径识别
-- 并行执行机会
-
-#### `clarifications` - 待确认问题
-需求模糊性问题数组：
-- 不明确的功能需求
-- 缺失的技术规范
-- 集成和兼容性问题
 
 ## Final Output
 

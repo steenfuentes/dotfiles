@@ -68,39 +68,6 @@ Questions for requirement or implementation ambiguities:
 - Missing technical specifications
 - Resource allocation and timeline concerns
 
-### 中文报告
-
-> 以下为中文版本，内容与英文部分对应。AGI可跳过此部分。
-
-#### `summary` - 状态概述
-- 当前开发状态的简要概览
-- 关键背景和近期进展亮点
-- 项目整体健康状况和发展势头评估
-
-#### `tasks` - 任务清单
-按优先级排序的任务列表结构：
-```json
-{
-  "id": "字符串",
-  "description": "任务描述",
-  "priority": "高|中|低",
-  "status": "待开始|受阻|进行中",
-  "dependencies": ["依赖任务ID1", "依赖任务ID2"]
-}
-```
-
-#### `references` - 参考资料
-- 相关文件和文档链接
-- 关联的提交和拉取请求
-- 有用的讨论和决策记录
-- 外部资源和文档
-
-#### `clarifications` - 待澄清问题
-需求或实现模糊性问题：
-- 不明确的优先级或范围边界
-- 缺失的技术规范
-- 资源分配和时间线问题
-
 ## Final Output
 
 Save the complete bilingual next tasks report to:
