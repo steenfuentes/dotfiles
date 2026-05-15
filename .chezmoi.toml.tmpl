@@ -1,0 +1,9 @@
+{{- /* Prompts on `chezmoi init` — answers stored in ~/.config/chezmoi/chezmoi.toml */ -}}
+{{- $work := promptBoolOnce . "work" "Is this a work machine?" -}}
+{{- $hostname := .chezmoi.hostname -}}
+
+sourceDir = "~/git/dotfiles"
+
+[data]
+  work = {{ $work }}
+  hostname = "{{ $hostname }}"

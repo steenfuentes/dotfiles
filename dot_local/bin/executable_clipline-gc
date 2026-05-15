@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+find /tmp -maxdepth 1 -name 'clipline-*.txt' -type f -mtime +1 -delete 2>/dev/null || true

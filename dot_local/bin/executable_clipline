@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cmd="${1:-}"
+if [[ -z "$cmd" ]]; then
+  echo "usage: clipline <command-text>" >&2
+  exit 2
+fi
+
+dir="/tmp"
+hash=$(printf '%s' "$cmd" | shasum -a 1 | awk '{print $1}')
+file="$dir/clipline-$hash.txt"
+printf '%s' "$cmd" > "$file"
+chmod 600 "$file"
+
+label=$(printf '%s' "$cmd" \
+  | tr '\n' $'\r' \
+  | sed $'s/\r/ ⏎ /g')
+if (( ${#label} > 80 )); then
+  label="${label:0:79}…"
+fi
+
+printf '\033]8;;hammerspoon://copyclip?id=%s\033\\📋 %s\033]8;;\033\\\n' "$hash" "$label"

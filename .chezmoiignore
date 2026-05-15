@@ -1,0 +1,31 @@
+# Files in this repo that pre-date the chezmoi migration. Chezmoi treats any
+# source file without a recognized prefix as a target rooted at $HOME, so
+# without these ignores it would try to write LICENSE → ~/LICENSE, etc.
+# Listed in target form (chezmoi.io/reference/special-files-and-directories/chezmoiignore/).
+
+LICENSE
+README.md
+install.sh
+.bash_aliases
+.tmux.conf
+.gitignore
+.DS_Store
+claude
+claude/**
+cursor
+cursor/**
+mcp
+mcp/**
+nvim
+nvim/**
+scripts
+scripts/**
+vscode
+vscode/**
+
+# Per-machine target exclusions go below (e.g., skip work-only skills on personal).
+# Available data after `chezmoi init` runs the toml template: .work, .hostname
+#
+# {{ "{{- if not .work }}" }}
+# .claude/skills/work-only-skill
+# {{ "{{- end }}" }}
